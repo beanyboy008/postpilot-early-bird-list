@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -21,25 +20,7 @@ import {
 
 const Index = () => {
   useEffect(() => {
-    const sections = document.querySelectorAll('.section');
-    
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('active');
-        }
-      });
-    }, { threshold: 0.1 });
-    
-    sections.forEach(section => {
-      observer.observe(section);
-    });
-    
-    return () => {
-      sections.forEach(section => {
-        observer.unobserve(section);
-      });
-    };
+    console.log('Index page is rendering');
   }, []);
 
   return (
